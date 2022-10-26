@@ -1,0 +1,19 @@
+{
+   "compilerOptions": {
+     "target": "es5", /* 解析结果 */
+     "module": "commonjs", /* 遵循的模块化规范 */
+     "strict": true,
+     "esModuleInterop": true, /* 支持以import xx from ‘xx’格式引入 */
+     "skipLibCheck": true,/* 跳过声明文件的类型检查 */
+     "forceConsistentCasingInFileNames": true /* 禁止对同一个文件的不一致的引用 */
+   },
+   "include": [
+     "src/**/*",
+    "./src/types/*.d.ts",
+   ],/* 指定需要编译的目录范围 */
+   "exclude": ["node_modules"], /* 忽略类型检查的目录 */
+  // 这一行配置的原因是ts-node默认不按tsconfig的include、files、exclude来解析*.d.ts文件,加上就可以了
+  "ts-node": {
+    "files": true // 增加这一条配置即可，其他同默认配置
+  },
+ }
