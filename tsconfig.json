@@ -10,7 +10,7 @@
    "include": [
      "src/**/*",
     "./src/types/*.d.ts",
-   ],/* 指定需要编译的目录范围 */
+   ],/* 指定需要编译的目录范围  */
    "exclude": ["node_modules"], /* 忽略类型检查的目录 */
   // 这一行配置的原因是ts-node默认不按tsconfig的include、files、exclude来解析*.d.ts文件,加上就可以了
   "ts-node": {
